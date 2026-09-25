@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: pharmacy-service
+
+  config:
+    import: configserver:http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
