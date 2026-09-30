@@ -1,12 +1,13 @@
-package com.example.insuranceservice;
+package com.example.notificationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InsuranceServiceApplication {
+public class NotificationServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(InsuranceServiceApplication.class, args);
+        SpringApplication.run(NotificationServiceApplication.class, args);
     }
+
 }

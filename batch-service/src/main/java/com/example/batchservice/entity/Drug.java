@@ -1,4 +1,4 @@
-package com.example.pharmacyservice.entity;
+package com.example.batchservice.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

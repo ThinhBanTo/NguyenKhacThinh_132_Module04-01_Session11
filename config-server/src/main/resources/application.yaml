@@ -11,3 +11,6 @@ spring:
         git:
           uri: https://github.com/ThinhBanTo/NguyenKhacThinh_132_Module04-01_Session09-config
           default-label: main
+          clone-on-start: true
+          force-pull: true
+          skipSslValidation: true

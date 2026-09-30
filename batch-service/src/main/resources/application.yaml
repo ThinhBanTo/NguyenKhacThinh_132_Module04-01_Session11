@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: batch-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5440/pharmacy_db
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      retries: 5
+
+app:
+  expiry:
+    days: 30
+    cron: "0 */1 * * * *"
+
+  kafka:
+    notification-topic: pharmacy-notifications
