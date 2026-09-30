@@ -19,6 +19,23 @@ spring:
       ddl-auto: update
     show-sql: true
 
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60m
+
+  session:
+    timeout: 30m
+    redis:
+      namespace: rikkei:pharmacy:session
+      save-mode: always
+
 insurance:
   url: localhost:8083
 
